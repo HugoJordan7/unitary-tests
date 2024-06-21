@@ -50,7 +50,11 @@ android {
 }
 
 dependencies {
-
+    val koin_version = "3.5.0"
+    val mock_version = "1.12.2"
+    implementation("io.mockk:mockk:$mock_version")
+    androidTestImplementation("io.mockk:mockk-android:$mock_version")
+    implementation ("io.insert-koin:koin-android:$koin_version")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
